@@ -115,17 +115,16 @@ void            Convertisseur::toFloat()
 
 void                Convertisseur::toChar()
 {
-	std::istringstream	iss(convert);
 	int					c;
 
 	if (convert.length() == 1)
 	{
-_NON_PRINT:        iss >> c;
-		std::cout << "Char : ";
+		c = convert[0];
+_NON_PRINT:	std::cout << "Char : ";
 		if (c > 126 || c < 32)
 			std::cout << "Non displayable" << std::endl;
 		else
-			std::cout << c << std::endl;
+			std::cout << (char)c << std::endl;
 	}
 	else
 	{
